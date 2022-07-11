@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart Tracker</title>
+</head>
+<body>
+    <h1>Heart Tracker</h1>
+    <p>Each time you help one of your classmates, you will earn a heart! If you have 10 hearts by the end of the chapter, you will earn a homework pass.</p>
+   
+    <ul class ='students'>
+        <% for(let i=0; i< info.length; i++) {%>
+            <li class = 'student'>
+                <span><%= info[i].firstName %> </span>
+                <span><%= info[i].lastName %> </span>
+                <span class = 'del'>delete</span>
+            </li>
+        }
+    </ul>
+
+    <form action="/addStudent" method="'POST">
+        <input type="text" placeholder = 'first' name ='first'>
+        <input type="text" placeholder = 'last' name = 'last'>
+        <button type="'submit">Add student</button>
+    </form>
+</body>
+</html>
