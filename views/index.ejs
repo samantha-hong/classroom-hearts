@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="../public/css/styles.css">
     <title>Heart Tracker</title>
 </head>
 <body>
@@ -15,15 +17,19 @@
             <li class = 'student'>
                 <span><%= info[i].firstName %> </span>
                 <span><%= info[i].lastName %> </span>
-                <span class = 'del'>delete</span>
+                <span><%= info[i].hearts %> </span>
+                <span class = 'fa fa-heart'></span>
+                <span class = 'fa fa-trash'></span>
             </li>
-        }
+       <% } %>
     </ul>
 
     <form action="/addStudent" method="'POST">
-        <input type="text" placeholder = 'first' name ='first'>
-        <input type="text" placeholder = 'last' name = 'last'>
-        <button type="'submit">Add student</button>
+        <input type="text" placeholder = 'First Name' name ='firstName'>
+        <input type="text" placeholder = 'Last Name' name = 'lastName'>
+        <input type="submit">
     </form>
+
+    <script src="../public/js/main.js"></script>
 </body>
 </html>
